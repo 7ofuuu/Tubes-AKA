@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1734960605 source:c:\coding\kuliah\data structure\binarysearch\main.cpp
+	<iostream>
+	<vector>
+	<chrono>
+
