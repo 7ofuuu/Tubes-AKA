@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1734960286 source:c:\coding\kuliah\data structure\sequentialsearch\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<chrono>
+
