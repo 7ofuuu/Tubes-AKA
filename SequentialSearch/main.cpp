@@ -1,3 +1,5 @@
+// SEQUENTIAL SEARCH
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -52,18 +54,18 @@ int main() {
     auto start = high_resolution_clock::now();
     int seqIterResult = sequentialSearchIterative(nims, target);
     auto end = high_resolution_clock::now();
-    auto seqIterTime = duration_cast<duration<float, microseconds::period>>(end - start).count();
+    auto seqIterTime = duration_cast<duration<float, nanoseconds::period>>(end - start).count();
 
     // Sequential search (recursive)
     start = high_resolution_clock::now();
     int seqRecResult = sequentialSearchRecursive(nims, target, 0);
     end = high_resolution_clock::now();
-    auto seqRecTime = duration_cast<duration<float, microseconds::period>>(end - start).count();
+    auto seqRecTime = duration_cast<duration<float, nanoseconds::period>>(end - start).count();
 
 
     // Output results
-    cout << "Sequential Search (Iterative): Index = " << seqIterResult << ", Time = " << seqIterTime << " microseconds" << endl;
-    cout << "Sequential Search (Recursive): Index = " << seqRecResult << ", Time = " << seqRecTime << " microseconds" << endl;
+    cout << "Sequential Search (Iterative): Index = " << seqIterResult << ", Time = " << seqIterTime << " nanoseconds" << endl;
+    cout << "Sequential Search (Recursive): Index = " << seqRecResult << ", Time = " << seqRecTime << " nanoseconds" << endl;
 
     return 0;
 }

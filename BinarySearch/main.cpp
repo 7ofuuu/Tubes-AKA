@@ -1,3 +1,5 @@
+// BINARY SEARCH
+
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -57,17 +59,17 @@ int main() {
     auto start = high_resolution_clock::now();
     int binIterResult = binarySearchIterative(nims, target);
     auto end = high_resolution_clock::now();
-    auto binIterTime = duration_cast<duration<float, microseconds::period>>(end - start).count();
+    auto binIterTime = duration_cast<duration<float, nanoseconds::period>>(end - start).count();
 
     // Binary search (recursive)
     start = high_resolution_clock::now();
     int binRecResult = binarySearchRecursive(nims, target, 0, nims.size() - 1);
     end = high_resolution_clock::now();
-    auto binRecTime = duration_cast<duration<float, microseconds::period>>(end - start).count();
+    auto binRecTime = duration_cast<duration<float, nanoseconds::period>>(end - start).count();
 
     // Output results
-    cout << "Binary Search (Iterative): Index = " << binIterResult << ", Time = " << binIterTime << " microseconds" << endl;
-    cout << "Binary Search (Recursive): Index = " << binRecResult << ", Time = " << binRecTime << " microseconds" << endl;
+    cout << "Binary Search (Iterative): Index = " << binIterResult << ", Time = " << binIterTime << " nanoseconds" << endl;
+    cout << "Binary Search (Recursive): Index = " << binRecResult << ", Time = " << binRecTime << " nanoseconds" << endl;
 
     return 0;
 }
